@@ -3,6 +3,16 @@ from flask import Flask, render_template, request,redirect, url_for
 from keras.models import load_model
 from keras.preprocessing import image
 import cv2
+import os
+import gdown
+
+model_path = 'model.h5'
+if not os.path.exists(model_path):
+    url = 'https://drive.google.com/file/d/1DF_H81XPxcIrrWxM9rWwOb2aB77xHizm/view?usp=drive_link'
+    gdown.download(url, model_path, quiet=False)
+
+model = load_model(model_path)
+
 app = Flask(__name__)
 
 
