@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+    </head>
+    <body>
+        {% extends "base.html" %}
+
+{% block content %}
+<div class="text-center">
+    <h1 class="display-4">Welcome to X-Ray Prediction System</h1>
+    <p class="lead">Upload an X-ray image to predict the severity of knee osteoarthritis using AI.</p>
+    <br>
+    <br>
+
+    <a href="{{ url_for('login') }}" class="btn btn-primary btn-lg ">Login</a>
+</div>
+
+
+{% endblock %}
+
+    </body>
+</html>

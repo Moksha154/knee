@@ -1,0 +1,307 @@
+/* -----------------------------------------------------------------------*/
+/*BASIC SETUP*/
+/* -----------------------------------------------------------------------*/
+/* Styling for large heading (display-4) */
+.display-4 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+}
+
+/* Styling for descriptive text (lead) */
+.lead {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #f1f1f1;
+    max-width: 600px;
+    margin: 0 auto;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* Center content */
+.text-center {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Styling for buttons */
+.btn-lg {
+    font-size: 1.2rem;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+
+
+/*home*/
+
+
+
+
+
+
+
+
+
+* {
+    margin: auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    font-family: 'Play', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+.clearfix {zoom: 1}
+.clearfix:after {                                             /*clear float after an element*/
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+    margin: 0;
+}
+
+/* -----------------------------------------------------------------------*/
+/*LINKS*/
+/* -----------------------------------------------------------------------*/
+
+a:link,
+a:visited {
+    color: #ffffff;
+    text-decoration: none;
+    padding-bottom: 1px;
+}
+
+a:hover,
+a:active {
+    color: #cccccc;
+    -webkit-transition: border-bottom 0.2s, color 0.2s;
+    transition: border-bottom 0.2s, color 0.2s;
+}
+
+/* -----------------------------------------------------------------------*/
+/*DEFAULT PART*/
+/* -----------------------------------------------------------------------*/
+
+.img-preview {
+    width: 256px;
+    height: 256px;
+    position: relative;
+    border: 5px solid #cccccc;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+    margin-top: 1em;
+    margin-bottom: 1em;    
+}
+
+.img-preview>div {
+    width: 100%;
+    height: 100%;
+    background-size: 256px 256px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.img-preview:hover {
+    border: 5px solid #000000;
+    -webkit-transition: all 0.5s ease;
+     transition: all 0.5s ease;  
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.upload-label{
+    display: inline-block;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    padding: 12px 28px;
+    background: #ffffff;
+    color: #000000;
+    font-size: 1em;
+    transition: all .4s;
+    cursor: pointer;
+    border: 2px solid #cccccc;
+}
+
+.upload-label:hover{
+    background: #000000;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+.loader {
+    border: 8px solid #f3f3f3; /* Light grey */
+    border-top: 8px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.very_main{
+    margin: auto;
+    text-align: center;
+}
+
+.final_word{
+    position: relative;
+    margin-top: 12px;
+    
+}
+.top_frame{
+    color: white;
+
+}
+
+
+
+
+
+
+/* Reset default margin and padding */
+* {
+    margin: auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling with background image */
+body {
+    font-family: 'Play', sans-serif;
+    background: url("../images/xray.jpg") no-repeat center center fixed; 
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+/* Overlay effect for better readability */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: -1;
+}
+
+/* Centered content container */
+.container {
+    text-align: center;
+    color: white;
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+}
+
+/* Card styling for login */
+.card {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    width: 350px;
+    margin: 100px auto;
+    text-align: center;
+}
+
+/* Input field styling */
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Button styling */
+.btn {
+    display: inline-block;
+    padding: 12px 24px; /* Adjusted padding for better appearance */
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-primary { background-color: #007bff; color: white;border:None }
+.btn-primary:hover {    background-color: #0056b6;}
+.btn-success { background-color: #28a745; color: white;border:none }
+.btn-success:hover {    background-color: #1e7e36;}
+.btn-danger { background-color: rgba(156, 1, 122, 0.622); color: white;}
+.btn-secondary { background-color: #6c757d; color: white; }
+.btn:hover {    opacity: 0.8;}
+
+/* Centered text with spacing */
+.text-center {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Error message styling */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Logout button position */
+.logout-container {
+    text-align: right;
+    align-items: right;
+    padding: 10px;
+}
+
+/* Navigation bar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Left-aligned button */
+.nav-left {
+    margin-left: 20px;
+}
+
+/* Right-aligned button */
+.nav-right {
+    margin-right: 20px;
+}
+
+/* Button styling */
+.navbar .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    text-decoration: none;
+}
