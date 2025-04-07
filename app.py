@@ -6,12 +6,7 @@ import cv2
 import os
 import gdown
 
-model_path = 'model.h5'
-if not os.path.exists(model_path):
-    url = 'https://drive.google.com/file/d/1DF_H81XPxcIrrWxM9rWwOb2aB77xHizm/view?usp=drive_link'
-    gdown.download(url, model_path, quiet=False)
 
-model = load_model(model_path)
 
 app = Flask(__name__)
 
@@ -21,7 +16,15 @@ dic = {0 : 'Normal', 1 : 'Doubtful', 2 : 'Mild', 3 : 'Moderate', 4 : 'Severe'}
 
 #Image Size
 img_size=256
-model = load_model('model.h5')
+
+
+model_path = 'model.h5'
+if not os.path.exists(model_path):
+    url = 'https://drive.google.com/file/d/1DF_H81XPxcIrrWxM9rWwOb2aB77xHizm/view?usp=drive_link'
+    gdown.download(url, model_path, quiet=False)
+
+model = load_model(model_path)
+
 
 model.make_predict_function()
 
